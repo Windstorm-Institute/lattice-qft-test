@@ -38,7 +38,7 @@ The tests are run on 1+1D lattices up to N = 3000 (a 295-point parameter scan ov
 
 - In 1+1D the dimensionless ratio R = S_ent / S_esc spans **10.56 orders of magnitude** across the (L, m) grid.
 - In 3+1D the mass-induced ratio R_Δ = ΔS / S_esc is bounded by 10⁻³ across all grid points; mutual information decays as L⁻⁴, opposite to the linear growth required by the postulate.
-- Two independent code paths (CPU NumPy + GPU torch.linalg.eigh on RTX 5090) agree on ΔS at the N = 14 anchor to better than 2×10⁻⁵, ruling out implementation artifacts.
+- Two independent code paths (CPU NumPy + GPU torch.linalg.eigh on a current-generation Nvidia GPU) agree on ΔS at the N = 14 anchor to better than 2×10⁻⁵, ruling out implementation artifacts.
 
 **The modular Hamiltonian gives a partial-survival result in 1+1D — right structural form, suppressed magnitude.**
 
