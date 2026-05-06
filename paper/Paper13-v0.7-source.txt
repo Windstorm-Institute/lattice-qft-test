@@ -1,0 +1,1007 @@
+A Lattice Quantum Field Theory Test of the Static Escrow Postulate:
+1+1D and 3+1D Falsification with Modular-Hamiltonian Partial Survival
+Grant L. Whitmer III
+Windstorm Institute, Fort Ann, New York 12828, USA
+(Dated: May 2026; Draft v0.7)
+
+ABSTRACT
+We test the static gravitational entropy escrow postulate Sₙₘ = |U_grav|/T_Unruh of
+Whitmer [1] using lattice quantum field theory. In 1+1 dimensions, a 295-point parameter
+scan of a free massless scalar at lattice sizes up to N = 3000 finds that the dimensionless
+ratio R = S_ent/Sₙₘ spans 10.56 orders of magnitude across the (L,m) grid; the massinduced entanglement ΔS = S_ent − S_vac is uniformly negative; and the result is Nconverged to four decimal places. In 3+1 dimensions, an N³-site scan over N ∈ {10, 12,
+14, 16, 18, 20} confirms the Bombelli–Srednicki area law (S_vac/N² → 0.0228) and
+shows that R has no finite continuum limit because the bipartition entropy is dominated
+by the area-law vacuum term, while the mass-induced ratio R_Δ = ΔS/Sₙₘ is bounded by
+10⁻³ across the grid. Two independent code paths agree to five decimals, ruling out
+implementation artifacts. Mutual information I(M₁:M₂) between regions surrounding the
+masses decays as L⁻⁴, opposite to the linear growth required by the postulate. The
+modular Hamiltonian content ΔK, evaluated under the Bisognano–Wichmann conjecture,
+exhibits the right sign and approximately recovers the BW linear asymptote ΔK ∝ d1 in
+1+1D within a small-d1 window (d1 ∈ [2, 6] at m=1), with prefactor approximately 1/30
+of the literal BW value. At larger d1 the local exponent decreases smoothly into a
+sublinear decay tail; the previously-published v0.4/v0.5 figure of "ΔK ∝ L^{0.7}" is here
+corrected to a regime-dependent characterization, with the single-power-law exponent
+identified as a fitting artifact across a smooth crossover. The literal bipartition-entropy
+reading of the postulate is ruled out in both 1+1D and 3+1D; the modular-content
+interpretation is approximately correct in 1+1D within the small-d1 BW regime, with a
+calculable suppression factor as the remaining open question. A companion paper [11]
+reports that the 3+1D modular content does not recover the BW asymptote within the d1
+range the lattice can resolve, with ΔK peaked at d1 ≈ 2 and decaying as d1^{−2 to −3}
+for larger d1, indicating that BW recovery is dimension-dependent or, equivalently, that
+the rate of approach to the continuum BW asymptote is substantially slower in 3+1D than
+in 1+1D. The framework's horizon-limit recoveries (Bekenstein–Hawking entropy via
+surface gravity) are independent of these flat-space tests.
+
+I. INTRODUCTION
+The Gravitational Entropy Escrow framework [1] proposes that gravitational binding energy is
+identified with entropy held in escrow against the local Unruh temperature,
+S_esc = |U_grav| / T_Unruh ,
+
+(1)
+
+where U_grav is the Newtonian binding energy of a configuration and T_Unruh = ħa/(2πck_B) is the
+Unruh temperature corresponding to the local acceleration a. For two equal point masses m at separation
+L, the prediction simplifies in lattice natural units (c = ħ = k_B = 1, lattice spacing = 1) to
+S_esc / k_B = 2π·m·L ,
+
+(2)
+
+with G_eff and the source mass cancelling identically. The framework recovers Newton's law via the
+Verlinde construction [2], Bekenstein–Hawking entropy at horizons via direct integration of Eq. (1) with
+surface gravity, and the deep-MOND acceleration scale a₀ = c²√(Λ/3)/(2π) from the de Sitter horizon
+temperature floor.
+The central claim of [1] is interpretive: that |U_grav|/T_Unruh has the dimensions of and represents
+an entropy held in escrow against the binding. Section 7.6 of [1] explicitly identifies a derivation of Eq.
+(1) from quantum field theory first principles as the natural next step. A companion note [3] ruled out the
+natural-looking covariant local-current extension of Eq. (1) as a notational reformulation of the saturated
+Bekenstein bound [4]. With the dynamical extension closed off, the static identification (1) becomes the
+load-bearing claim that requires independent testing.
+This paper reports such a test. We compute several QFT entropy quantities of a free massless scalar in
+the presence of two localized mass distributions and compare to the prediction (2). The tests are
+performed in 1+1D using Peschel's exact formula for Gaussian states [5] and extended to 3+1D using the
+same machinery on cubic lattices. Three independent entropy measures are tested: bipartition
+entanglement entropy, mutual information between regions, and modular Hamiltonian content evaluated
+under the Bisognano–Wichmann conjecture [6].
+The headline result is that the literal identification of S_esc with bipartition entanglement entropy
+fails in both 1+1D and 3+1D. The mutual information measure confirms this independently. The modular
+Hamiltonian content gives a partial-survival result: right structural form, wrong magnitude. Section II
+describes the methodology. Section III describes the validations. Section IV reports the 1+1D result,
+Section V the independent confirmations from mutual information and the 3+1D continuum-limit study,
+Section VI the modular Hamiltonian partial-survival result. Section VII discusses the falsifiability check.
+Sections VIII–X interpret what the test settles, methodological notes, and conclusion.
+
+II. METHODOLOGY
+A. Lattice setup (1+1D)
+We discretize a free massless scalar field on a 1+1D lattice with N sites, with Dirichlet boundary
+conditions at both walls (avoiding the periodic-BC zero mode). The Hamiltonian is
+H = (1/2) Σᵢ [πᵢ² + (φᵢ₊₁ − φᵢ)² + mᵢ² φᵢ²] ,
+
+(3)
+
+which writes as H = (1/2)[πᵀπ + φᵀKφ] with
+K = 2I − S − Sᵀ + diag(mᵢ²) ,
+
+(4)
+
+where S is the lattice shift operator. Two equal localized masses are placed at sites (N−L)/2 and
+(N+L)/2, on opposite sides of the bipartition cut at site N/2 and at distance L/2 each from the cut. Singlesite delta masses are used; Section IV.D verifies that the conclusions are invariant under Gaussian
+smearing of the mass profile.
+The parameter scan covers N ∈ {100, 300, 1000, 3000}, L ∈ {2, 4, 6, 10, 20, 40, 80, 160, 320, 640}
+lattice spacings, and m ∈ [10⁻³, 10²] sampled across orders of magnitude, for 295 distinct (N, L, m)
+points.
+
+B. Correlators and Peschel formula
+The ground state of (3) is Gaussian, with closed-form correlators
+⟨φᵢ φⱼ⟩ = ½ (K⁻¹ᐟ²)ᵢⱼ ,
+
+⟨πᵢ πⱼ⟩ = ½ (K¹ᐟ²)ᵢⱼ .
+
+(5)
+
+Restricting the correlators to subsystem A (sites [0, N/2)) gives the reduced covariances M_φ = ⟨φφᵀ ⟩|
+_A and M_π = ⟨ππᵀ⟩|_A. The symmetric product
+M_sym = M_φ¹ᐟ² M_π M_φ¹ᐟ²
+
+(6)
+
+has eigenvalues νₖ² ≥ ¼, and the bipartition entanglement entropy follows from Peschel's formula [5]:
+S_ent = Σₖ [(νₖ + ½) ln(νₖ + ½) − (νₖ − ½) ln(νₖ − ½)] .
+
+(7)
+
+The numerical procedure is: build K from (4), diagonalize to obtain Eq. (5), restrict to subsystem A,
+form M_sym from (6), diagonalize, and apply (7). All operations use double-precision dense linear
+algebra.
+C. Comparison metrics
+Three diagnostic ratios are computed from the lattice measurements and compared to the postulate's
+prediction (2):
+R_total = S_ent / S_esc ,
+
+(8)
+
+R_Δ = ΔS / S_esc ,
+
+(9)
+
+ΔS ≡ S_ent − S_vac ,
+
+where S_vac is the entanglement entropy at the same N with no localized masses (a function of N and
+the boundary condition only). In addition, mutual information I(M₁:M₂) between regions surrounding
+each mass and modular Hamiltonian content ΔK are introduced in Sections V and VI respectively. If the
+postulate (2) holds with an order-unity prefactor, the diagnostic ratios should be approximately constant
+of order unity across the parameter scan.
+D. Lattice setup (3+1D)
+The 3+1D setup uses a cubic lattice of N³ sites with Dirichlet boundary conditions on all six faces.
+Two point masses are placed on the central x-axis at coordinates (i, N/2, N/2) with i = (N±L)/2, with the
+bipartition cutting the cube along the (j,k) plane at i = N/2. The K-matrix has shape N³ × N³ with
+Laplacian structure plus diagonal mass terms; for N = 20 this is 8000 × 8000.
+The 3+1D scan covers N ∈ {10, 12, 14, 16, 18, 20}, L ∈ {2, 4, 6, 8}, and m ∈ {0.1, 1.0, 10.0}. Two
+independent computational paths were used: a CPU implementation using NumPy with OpenBLAS
+multi-threading across 24 cores, and a GPU implementation using torch.linalg.eigh on an NVIDIA RTX
+5090. The two paths agree on ΔS at the N = 14 anchor to better than 2×10⁻⁵, providing independent
+cross-validation; see Section IX.
+
+III. VALIDATIONS
+Three validations against published results were performed before any parameter scan was treated as
+established.
+A. Cardy–Calabrese central charge (V1)
+In the absence of localized masses, the bipartition entanglement entropy of a half-line on a DirichletBC lattice obeys [7]
+S_vac(N/2) ≃ (c/6) ln(2N/π) + const_lattice ,
+
+c=1,
+
+(10)
+
+for a free massless scalar (central charge c = 1). Successive doublings of N from 50 to 1600 give the
+measured values shown in Table I. The slope from successive doublings converges to (1/6) ln 2 ≃
+0.11552, matching the predicted central charge to better than 0.1% by N = 1600. The non-universal
+additive constant ≃ −0.030 is the expected lattice-regularization-dependent piece, stable across all four
+scan-grid N values to four decimal places.
+TABLE I. Bipartition entanglement entropy S_vac(N/2) vs lattice size N for a massless free scalar with Dirichlet
+boundary conditions, compared to the Calabrese–Cardy prediction (10) with c = 1. The slope (1/6) ln 2 ≃ 0.11552 is
+reproduced to better than 0.1% by N = 1600.
+N
+
+S_vac (measured)
+
+(1/6) ln(2N/π)
+
+Difference
+
+50
+
+0.55029
+
+0.57674
+
+−0.02645
+
+100
+
+0.66413
+
+0.69226
+
+−0.02814
+
+200
+
+0.77881
+
+0.80779
+
+−0.02897
+
+400
+
+0.89392
+
+0.92331
+
+−0.02939
+
+800
+
+1.00924
+
+1.03884
+
+−0.02960
+
+1600
+
+1.12466
+
+1.15436
+
+−0.02971
+
+B. Heavy-mass Dirichlet limit (V2)
+In the limit m → ∞, the localized-mass sites become perfect Dirichlet walls, decoupling the lattice
+into independent regions. The bipartition cuts the inner interval [i₁, i₂] of length L at its midpoint.
+Calabrese–Cardy then predicts
+S_ent(m→∞) → (1/6) ln(2L/π) + const_lattice .
+
+(11)
+
+For L = 20: predicted S → (1/6) ln(40/π) − 0.030 = 0.394; measured at m = 100: S = 0.394, agreement
+to four decimal places. This is an internal cross-check that the localized-mass machinery and the Peschel
+reduction agree at the analytically tractable limit.
+C. Symbolic dimensional consistency (V3)
+The escrow prediction (2) was derived symbolically using sympy and verified to be the unique
+dimensionally-consistent form after the cancellation of G_eff and the source mass. Per the methodological
+lessons of [3], dimensional consistency is necessary but not sufficient — the substantive checks are V1
+and V2.
+D. 3+1D area law (V4)
+In 3+1D, the vacuum entanglement entropy across a planar cut obeys the Bombelli–Srednicki area
+law [8, 9]:
+S_vac ≃ a · N² + subleading ,
+
+a ≃ 0.022 .
+
+(12)
+
+The measured area-law coefficient S_vac/N² across N ∈ {10, 12, 14, 16, 18, 20} is shown in Table II,
+monotonically converging from below toward an asymptote near 0.0228, consistent with published
+values.
+TABLE II. Area-law coefficient S_vac/N² in 3+1D vs lattice size N, compared to the Bombelli–Srednicki
+prediction (12). The sequence is monotone-increasing toward an asymptote ≃ 0.0228.
+N
+
+S_vac
+
+S_vac / N²
+
+10
+
+2.140
+
+0.0214
+
+12
+
+3.139
+
+0.0218
+
+N
+
+S_vac
+
+S_vac / N²
+
+14
+
+4.331
+
+0.0221
+
+16
+
+5.708
+
+0.0223
+
+18
+
+7.290
+
+0.0225
+
+20
+
+9.080
+
+0.0227
+
+IV. RESULT: BIPARTITION ENTANGLEMENT ENTROPY IN 1+1D
+A. Quantitative summary
+Across the 295-point (N, L, m) parameter scan in 1+1D:
+(i) The diagnostic ratio R_total defined in Eq. (8) ranges from 2.3×10⁻⁹ to 83.3 at N = 1000 — a span
+of 10.56 orders of magnitude across the (L, m) grid. The geometric mean |R_total| is approximately
+8×10⁻³.
+(ii) The mass-induced contribution ΔS = S_ent − S_vac is uniformly negative across all scanned
+points. Localized masses reduce entanglement rather than increasing it.
+(iii) Results are converged with respect to lattice size to four decimal places for m ≥ 1 across N ∈
+{100, 300, 1000, 3000}; the scatter in R is not a finite-size artifact.
+Table III shows R_total at fixed (L, m) across N. The N-independence at moderate-to-heavy m
+establishes that the failure is not a lattice artifact.
+TABLE III. Continuum-limit behavior of R_total at fixed (L, m) for varying N in 1+1D. For m ≥ 1 the ratio is Nindependent to four decimal places already at N = 100. The result is converged.
+L
+
+m
+
+N=100
+
+N=300
+
+N=1000
+
+N=3000
+
+4
+
+0.01
+
+2.6388
+
+3.3549
+
+4.1245
+
+4.7797
+
+4
+
+0.1
+
+0.2350
+
+0.2678
+
+0.2827
+
+0.2864
+
+4
+
+1.0
+
+0.00737
+
+0.00737
+
+0.00737
+
+0.00737
+
+4
+
+10
+
+0.000495
+
+0.000495
+
+0.000495
+
+0.000495
+
+10
+
+1.0
+
+0.00488
+
+0.00488
+
+0.00488
+
+0.00488
+
+40
+
+1.0
+
+0.00206
+
+0.00206
+
+0.00206
+
+0.00206
+
+160
+
+1.0
+
+—
+
+0.000739
+
+0.000739
+
+0.000739
+
+TABLE IV. R_total across the (L, m) grid at N = 1000. The values span 10.56 orders of magnitude; no rescaling
+can recover order-unity agreement with the postulate.
+L \\ m
+
+0.001
+
+0.01
+
+0.1
+
+1
+
+10
+
+100
+
+2
+
+83.3
+
+8.25
+
+0.563
+
+0.00881
+
+1.07e−5
+
+2.27e−9
+
+4
+
+41.6
+
+4.12
+
+0.283
+
+0.00737
+
+0.000495
+
+4.92e−5
+
+10
+
+16.7
+
+1.65
+
+0.115
+
+0.00488
+
+0.000443
+
+4.43e−5
+
+40
+
+4.16
+
+0.413
+
+0.0301
+
+0.00206
+
+0.000203
+
+2.03e−5
+
+160
+
+1.04
+
+0.103
+
+0.00844
+
+0.000739
+
+7.37e−5
+
+7.37e−6
+
+640
+
+0.26
+
+0.026
+
+0.00249
+
+0.000242
+
+2.42e−5
+
+2.42e−6
+
+B. Why the literal postulate fails: the structural mismatch
+The escrow prediction Eq. (2) grows linearly with both m and L without bound, with G_eff and the
+source mass exactly cancelling. The free-scalar entanglement entropy across a bipartition behaves very
+differently. The vacuum part S_vac scales as (1/6) ln(2N/π) — bounded for fixed N, growing only
+logarithmically with system size. The mass-induced part ΔS is bounded above by O(1) nats in absolute
+value: localized masses entangle or disentangle modes only within a correlation length ξ ∼ 1/m of
+themselves, giving an O(1) entropy contribution that saturates as L → ∞. Heavy localized masses act as
+effective Dirichlet walls in the chain, decreasing the bipartition entanglement and giving ΔS < 0.
+The mismatch is structural, not a question of a missing prefactor: S_esc is an extensive quantity
+proportional to mL; ΔS is intensive and bounded by topology. No constant rescaling, dimensional
+adjustment, or modified temperature in (1) can reconcile a bounded quantity with an unbounded one.
+C. Robustness against UV artifacts
+The result is invariant under the choice of how the localized mass is implemented. Single-site delta
+masses and Gaussian-smeared profiles with widths σ ∈ {1, 2, 5} lattice spacings all produce the same
+qualitative behavior: ΔS uniformly negative, R_total varying across many orders of magnitude. For m ≤
+0.1, ΔS is invariant to smearing to better than 1%. For m ∼ 1 and larger, smearing makes ΔS more
+negative — a broader profile is a broader "wall," removing more entanglement. Single-site UV artifacts
+are not driving the result.
+
+V. INDEPENDENT CONFIRMATIONS
+Two additional tests confirm the negative result of Section IV from independent angles. The first uses
+an entirely different entropy measure (mutual information instead of bipartition entanglement); the second
+probes whether the failure persists in higher spatial dimensions.
+A. Mutual information I(M₁:M₂)
+If the prediction (2) were correctly identified with QFT entropy, a natural alternative measure is the
+mutual information between regions M₁ and M₂ surrounding the two localized masses,
+I(M₁:M₂) = S(M₁) + S(M₂) − S(M₁ ∪ M₂) .
+
+(13)
+
+For free massless scalars in 1+1D, the leading contribution at large separation scales as [10]
+I(M₁:M₂) ∼ (w/L)⁴ ,
+
+(14)
+
+with w the width of each region. We measured I(M₁:M₂) for w = 4 lattice sites surrounding each mass
+and L ∈ {10, 20, 40, 80, 160, 320}. The mutual information was found to decay as L⁻⁴ across this range,
+while the postulate's prediction grows as 2πmL. The diagnostic ratio R_MI = I(M₁:M₂)/S_esc thus spans
+more than 12 orders of magnitude across the parameter scan, in the opposite direction to what the
+postulate requires. This is an independent confirmation that the literal postulate's linear growth is
+incompatible with QFT entropy measures in flat space.
+B. 3+1D continuum-limit study
+The 3+1D bipartition entanglement entropy was computed across N ∈ {10, 12, 14, 16, 18, 20} for the
+(L, m) grid described in Section II.D. The vacuum area-law validation (Table II) confirmed the lattice
+implementation. The mass-induced results yield a structurally sharper failure than 1+1D.
+Table V shows R_total at three representative (L, m) pairs across N. The diagnostic ratio R_total has
+no finite continuum limit: it grows as N² across the entire (L, m) grid, with
+R_total · S_esc = S_vac
+
+[exact, ratio 1.0000 at every measured N] .
+
+(15)
+
+The mathematical reason is transparent: the bipartition entanglement entropy in 3+1D is dominated
+by the area-law vacuum contribution S_vac ∝ N², which is unrelated to the mass binding, while S_esc =
+2πmL is N-independent. There is no rescaling of N or of S_esc that produces a finite R_total in the
+continuum limit; the postulate's prediction is structurally incompatible with the dominant contribution to
+bipartition entanglement in 3+1D.
+TABLE V. R_total in 3+1D at fixed (L, m) for varying N. The ratio grows as N² (driven by the area-law vacuum
+term) with no finite continuum limit. The dimensionless mass-induced ratio R_Δ (last column, at N = 20) is bounded
+by 10⁻³ across the grid, three orders of magnitude below the postulate's prediction R_Δ = 1.
+L
+
+m
+
+N=10
+
+N=12
+
+N=14
+
+N=16
+
+N=18
+
+N=20
+
+R_Δ
+(N=20)
+
+2
+
+0.1
+
+1.71
+
+2.50
+
+3.45
+
+4.55
+
+5.81
+
+7.22
+
+−1×10⁻⁴
+
+2
+
+1.0
+
+0.171
+
+0.249
+
+0.345
+
+0.455
+
+0.581
+
+0.722
+
+−8×10⁻⁴
+
+4
+
+1.0
+
+0.0855
+
+0.125
+
+0.173
+
+0.228
+
+0.291
+
+0.361
+
+−2×10⁻⁴
+
+The mass-induced ratio R_Δ = ΔS/S_esc is bounded by approximately 10⁻³ across the entire (L, m)
+grid — three orders of magnitude below the postulate's prediction R_Δ = 1. ΔS is uniformly negative,
+with |ΔS| ≤ 0.05 nats, confirming that the Dirichlet-wall behavior observed in 1+1D carries over to 3+1D.
+The 3+1D failure is therefore not merely a smaller-magnitude version of the 1+1D failure but a
+structurally distinct one. In 1+1D, R_total is bounded but spans 10.56 orders of magnitude because S_ent
+saturates while S_esc grows linearly. In 3+1D, R_total has no continuum limit at all because the
+bipartition entropy is dominated by the cut-area vacuum term, which has no relationship to the mass
+binding.
+
+VI. MODULAR HAMILTONIAN CONTENT: A PARTIAL-SURVIVAL RESULT
+A. Bisognano–Wichmann motivation
+The Bisognano–Wichmann theorem [6] states that the modular Hamiltonian K_A of a Lorentzinvariant quantum field theory restricted to a half-space is, in vacuum,
+K_BW = 2π ∫ x_⊥ T₀₀(x) dᵈx ,
+
+(16)
+
+where x_⊥ is the perpendicular distance from the entangling surface and T₀₀ is the energy density.
+For a localized energy m at perpendicular distance L from the cut, the linear-response prediction is
+ΔK_BW ≃ 2π·m·L ,
+
+(17)
+
+which is exactly the form of the escrow prediction (2). The structural match is striking: both are linear
+in m and L with the same numerical coefficient, in the same regime (linear response to a localized energy
+at perpendicular distance L from a half-space cut). This raises the possibility that the postulate's correct
+identification is with modular Hamiltonian content rather than entanglement entropy.
+B. Lattice implementation
+We computed
+ΔK = ⟨K_A^vac⟩_perturbed − ⟨K_A^vac⟩_vacuum
+
+(18)
+
+across the same 1+1D lattice grid as Section IV, where K_A^vac is the modular Hamiltonian of the
+vacuum reduced to subsystem A and the perturbed state is the ground state with localized masses on. The
+implementation uses the Williamson normal form of the vacuum covariance matrix; details follow.
+
+Let M_φ and M_π be the reduced φ-φ and π-π covariances on A. Diagonalize the symmetric product
+M_φ¹ᐟ² M_π M_φ¹ᐟ² = V diag(νₖ²) Vᵀ, and define modular eigenvalues
+εₖ = ln[(νₖ + ½)/(νₖ − ½)] .
+
+(19)
+
+The modular Hamiltonian quadratic kernels in the (φ, π) basis are then
+Q = M_φ⁻¹ᐟ² V diag(εₖνₖ) Vᵀ M_φ⁻¹ᐟ² ,
+
+(20)
+
+P = M_φ¹ᐟ² V diag(εₖ/νₖ) Vᵀ M_φ¹ᐟ² ,
+
+(21)
+
+such that K_A_quad = (1/2)φᵀQφ + (1/2)πᵀPπ plus a constant offset fixed by ⟨K_A⟩_vac = S_vac.
+The expectation value of K_A_quad in any other Gaussian state with covariances M'_φ, M'_π is then
+⟨K_A_quad⟩ = ½ tr(Q M'_φ) + ½ tr(P M'_π) .
+
+(22)
+
+The implementation was internally validated by three checks: (i) relative-entropy positivity, S_rel =
+ΔK + S_vac − S_pert ≥ 0 verified for all scanned states (this is the strict consequence of relative-entropy
+non-negativity and is a sanity check on the modular kernel construction independent of whether the BW
+conjecture holds); (ii) modal-vs-original-basis cross-check, with ⟨K_quad⟩_vac computed two
+independent ways agreeing to six decimal places; (iii) constant-offset consistency between the modular
+Hamiltonian's quadratic part and the vacuum entanglement entropy.
+An initial implementation produced relative-entropy violations of order 10⁴, immediately flagging an
+error in the Williamson decomposition; correction yielded order-unity values with positivity verified
+throughout. See Section IX.
+C. Result: right form, wrong magnitude
+The lattice measurement of ΔK confirms the BW structural form: ΔK is positive, grows with L, and is
+approximately linear in m for moderate values. This is the correct sign and the correct scaling direction
+predicted by the escrow postulate when reinterpreted as modular content. Two quantitative discrepancies
+emerge.
+First, the L-scaling is not a single power law. The published v0.4 of this paper reported a singlepower-law fit ΔK ∝ L^{0.7±0.05} at (m=1, N=1000); a re-examination using sliding-window fits across
+the same data shows that this single exponent was an artifact of fitting across a smooth crossover. The
+local exponent, computed in 5-point sliding windows over d1 (the perpendicular distance of the mass in
+subsystem A to the cut, which equals L/2 in the symmetric two-mass placement), evolves continuously
+from
+ΔK ∝ d1^{1.02±0.05}
+
+[d1 ∈ [2, 6]]
+
+(23)
+
+at small d1 — indistinguishable from the BW linear asymptote — down through intermediate values
+to
+ΔK ∝ d1^{0.5±0.04}
+
+[d1 ∈ [16, 64]]
+
+(23a)
+
+in the decay tail. The published "0.7" was an effective exponent obtained by fitting a single power
+law across both regimes; it is not a universal scaling. The robust statements supported by the data are: (i)
+the BW linear asymptote ΔK ∝ d1 is approximately recovered at small d1 in 1+1D, with a suppressed
+prefactor; (ii) the crossover into a sublinear decay tail is smooth, not abrupt; (iii) the local exponent at any
+given window depends on which window is fit. We retract the v0.4 framing of "sublinear scaling" as a
+universal description and replace it with the regime-dependent characterization above.
+
+Second, the magnitude is too small. In the small-d1 BW regime [d1 ∈ [2, 6], m=1, N=1000], the
+prefactor ΔK / (2π·m·d1) is approximately 0.030–0.037, corresponding to a suppression factor of roughly
+1/30 relative to the literal BW prediction. The closely-related v0.4 figure of "approximately 55× smaller
+at L=4, m=1" came from the two-mass protocol where the relevant variable is d1 = L/2 = 2; under either
+convention the magnitude suppression is on the order of 30× to 55× depending on which point in the scan
+is chosen. For most of the (L, m) grid at heavier mass the apparent ratio drops further (down to 10⁻⁶ in
+the heavy-mass / large-L regime), but this is largely because heavy mass takes the system outside the
+linear-response regime where the BW formula was derived; ΔK saturates rather than continuing to grow
+as 2π·m·d1. The clean BW comparison is at moderate mass (m ≲ 1) and moderate d1 (d1 ∈ [2, 8]), where
+the linear asymptote is recovered with a suppressed prefactor.
+D. Interpretation
+The modular Hamiltonian result in 1+1D is consistent with the BW asymptote at small d1, with a
+suppressed prefactor. Specifically, in the regime d1 ∈ [2, 6] at m = 1, the local exponent is +1.02±0.05
+(indistinguishable from the BW linear scaling ΔK ∝ d1) and the prefactor is approximately 0.030 of the
+literal BW value 2π·m·d1. The smooth crossover into a sublinear decay tail at d1 ≳ 8 reflects geometric
+corrections to the BW half-space assumption: the lattice is not a true Rindler wedge, the boundary
+conditions are Dirichlet rather than free, and at d1 comparable to subsystem-A depth the half-space
+approximation breaks down. The decay tail is therefore consistent with a finite-size deformation of BW
+rather than a fundamental failure. Determining whether the prefactor 1/30 has a calculable origin (e.g.,
+from boundary-condition corrections, from the lattice regularization, or from a missing dimensiondependent geometric factor) and whether the BW asymptote can be cleanly extracted in the limit of a true
+half-chain bipartition is left for future work. The result we report here is that the BW modular
+Hamiltonian asymptote is qualitatively correct in 1+1D within a finite small-d1 window; this is closer to a
+partial confirmation than v0.4 / v0.5 framings of the same data suggested.
+The dimensional dependence of this result is investigated in a companion paper [11], which extends
+the same Williamson-decomposition methodology to a 3+1D cubic lattice. The 3+1D result is
+qualitatively different from the 1+1D result reported here: the BW linear asymptote is not recovered
+within the d1 range the lattice can resolve, and ΔK is peaked at d1 ≈ 2 with a power-law decay ΔK ∝
+d1^{−2 to −3} for d1 ≥ 3. At matched mass m = 1 (within the linear-response regime where the BW
+comparison is strictly meaningful), the 3+1D peak ratio ΔK/(2π·m·d1) ≈ 0.0026 is approximately 14×
+smaller than the 1+1D peak ratio ≈ 0.037 reported in this paper, so 1+1D is closer to BW than 3+1D in
+both qualitative scaling and absolute prefactor. The companion paper notes that the rate of approach to the
+continuum BW asymptote may genuinely be slower in 3+1D (where the conformal-symmetry group of
+the massless free scalar is finite-dimensional) than in 1+1D (where it is the infinite-dimensional Virasoro
+algebra), so 3+1D BW recovery at much larger d1 inaccessible to the present lattice cannot be strictly
+ruled out. We refer the reader to [11] for the full 3+1D analysis and the comparative discussion.
+On the calculable origin of the 1/30 prefactor in 1+1D, one candidate explanation is worth flagging as
+a target for follow-up theoretical work. The Bisognano–Wichmann formula K_A^vac = 2π ∫ x_ ⊥ T_00
+dV is an infrared / long-wavelength prediction valid in the continuum where Lorentz invariance is exact.
+A localized lattice mass perturbation with m ≈ 1 in lattice units corresponds to a correlation length ξ ∼
+1/m ∼ 1 lattice spacing, which is a UV-scale perturbation by the lattice's own measure. In this regime the
+BW formula's continuum derivation no longer strictly applies; the effective lattice modular Hamiltonian is
+expected to differ from the BW formula by a regulator-dependent prefactor that depends on the ratio of
+correlation length to lattice spacing. The 1/30 suppression observed at small d1 may reflect this UV/IR
+mismatch rather than a fundamental modification of the postulate, and could in principle be calculated
+from first principles by computing the lattice modular Hamiltonian directly in the continuum scaling
+limit. We do not pursue this calculation here but identify it as a sharp theoretical question that would
+either remove or reify the apparent suppression. A second candidate is that the Dirichlet boundary
+
+conditions used for the lattice differ from the free boundary conditions assumed in the standard BW
+derivation; the difference may contribute a calculable boundary-correction factor.
+We do not adjudicate among these readings. The result is reported as the most promising direction for
+future modification of the postulate, and as a sharp constraint on what such modifications must satisfy.
+
+VII. FALSIFIABILITY CHECK
+A central concern when comparing computed quantities to dimensional-analysis predictions is the
+possibility that any apparent agreement (or disagreement) is a tautology fixed by the choice of
+dimensional combinations rather than reflecting physical content. We check this directly.
+The Unruh temperature T_Unruh varies across the (L, m) grid as T_Unruh ∝ m/L² in lattice units,
+spanning approximately five orders of magnitude across the scanned range. If the test were dimensionally
+trivial — if any choice of T would produce R ≃ 1 — then the construction would be uninformative
+regardless of the result. We verified that no choice of T produces a uniform R ≃ 1 across the parameter
+scan; T_Unruh is not privileged in this sense. The 10.56 orders of magnitude variation in R is therefore a
+real measurement of the disagreement between the postulate's prediction and the actual QFT
+entanglement structure, not an artifact of dimensional rescaling.
+This is the analog of the lesson from [3]: a construction that achieves agreement only by choosing the
+dimensional combination that produces the desired answer is not an empirical confirmation. The lattice
+test passes this falsifiability check; the Section IV result is a genuine quantitative measurement of the
+postulate's failure as bipartition entanglement entropy.
+
+VIII. WHAT THIS SETTLES, AND WHAT IT DOES NOT
+A. What this settles
+The literal static escrow postulate (1), taken as a quantitative identification of S_esc with QFT
+bipartition entanglement entropy in flat space with point-mass binding, does not survive in either 1+1D or
+3+1D. In 1+1D, the qualitative behavior is wrong (sign, scaling, boundedness in N), the magnitude is
+wrong (10.56 orders-of-magnitude scatter), and the lattice-size convergence rules out finite-size
+explanations. In 3+1D, the bipartition entropy is dominated by the area-law vacuum term and has no
+finite continuum limit when divided by the postulate's prediction; the dimensionless mass-induced ratio
+R_Δ is bounded by 10⁻³, three orders of magnitude below the postulate's prediction. Two independent
+code paths agree to five decimals on the 3+1D calculation, ruling out implementation artifacts. The
+mutual information measure confirms the failure from a third independent direction. No constant
+rescaling of S_esc by a dimensionless factor or by a modified temperature can repair the disagreement.
+B. What this does not settle
+The horizon limit is unaffected. The framework's recovery of Bekenstein–Hawking entropy at black
+hole horizons [1, §5] goes through surface gravity and the Unruh temperature at the horizon directly, not
+through volume-bipartition entanglement. The lattice test does not address the horizon recovery. The
+horizon claims of [1] are independent of the present result.
+Curved-spacetime regimes are also outside scope. The 3+1D test reported here uses a flat-space
+lattice with imported Newtonian binding-energy form. The framework's predictions for genuine curvedspacetime configurations (non-perturbative gravity, full general-relativistic treatment) are not addressed
+by this test and require lattice quantum gravity techniques beyond the scope of the present calculation.
+The framework's empirical content is unaffected. The empirical predictions of [1] — the constant-a₀
+SPARC reanalysis, the deep-MOND asymptote a₀ = c²√(Λ/3)/(2π), and the baryonic Tully–Fisher relation
+— do not depend on the literal bipartition-entanglement reading of the static postulate. They depend on
+
+the deep-MOND asymptote and the framework's interpretive identification at horizons, neither of which
+is refuted by the present result.
+Modular-content variants remain partially open. The modular Hamiltonian result of Section VI shows
+the BW linear asymptote approximately recovered at small d1 in 1+1D, with prefactor approximately
+1/30. The companion paper [11] extends the same methodology to 3+1D and finds that the BW asymptote
+is not recovered within the d1 range the lattice can resolve, with ΔK peaked at d1 ≈ 2 and decaying as
+d1^{−2 to −3} for d1 ≥ 3. At matched mass (m = 1) the 1+1D peak ratio is also approximately 14× larger
+than the 3+1D peak ratio, so 1+1D is closer to BW in both qualitative scaling and absolute prefactor.
+Taken together, the two papers show that the modular-content interpretation of the static escrow postulate
+has dimension-dependent validity within the lattice sizes presently accessible: approximately correct in
+1+1D within a finite small-d1 window; not recovered in 3+1D at the d1 range probed, with the open
+question of whether 3+1D BW recovery can be achieved at much larger d1 not currently accessible.
+Whether the 1+1D 1/30 prefactor has a calculable origin (boundary-condition corrections, lattice
+regularization with UV/IR mismatch, or a missing geometric factor in the postulate) and whether the
+3+1D structure can be reconciled with a modified BW form remain open theoretical questions for future
+work.
+C. Implication for the framework
+The framework's interpretive content survives the test. Its quantitative literal interpretation —
+specifically, the reading in which |U_grav|/T_Unruh equals the bipartition entanglement entropy of a
+quantum field across a surface separating two masses — does not. What survives is dimension-dependent:
+in 1+1D the BW modular Hamiltonian asymptote is approximately recovered within a small-d1 window,
+with a calculable suppression factor of approximately 1/30 as the remaining open question; in 3+1D the
+BW asymptote is not recovered. The framework now lives as a horizon-thermodynamic interpretation
+supplemented by a 1+1D modular-content match, with the dimensional dependence of the modularcontent match being the principal open problem. Section VI's small-d1 BW recovery in 1+1D, together
+with the dimensional-contrast result in [11], identifies the prefactor calculation and the dimensionaldependence question as the sharpest research directions.
+
+IX. METHODOLOGICAL NOTES
+The calculations reported here were performed via autonomous runs of a large language model on
+local hardware (NVIDIA RTX 5090, Intel Core Ultra 9, 256 GB DDR5) with full code execution and
+persistence-to-disk capabilities. Three features of this methodology are worth highlighting.
+First, validations against published results, not internal consistency checks alone, are the binding
+constraint. The Calabrese–Cardy formula (10) and the Bombelli–Srednicki area-law coefficient (12) are
+external benchmarks; agreement to better than 0.1% (1+1D) and a few percent (3+1D) is a meaningful
+confirmation that the lattice implementations are correct. Pure symbolic or dimensional checks alone
+cannot establish this. The methodological lesson from the C8 episode of [3] — dimensional consistency is
+necessary but not sufficient — was applied here from the start.
+Second, the falsifiability check (Section VII) is load-bearing. Without verifying that T_Unruh is
+privileged in producing the comparison, the result could be dismissed as a tautology fixed by dimensional
+analysis. The check rules this out: the test has empirical content.
+Third, modular-content code requires special validation. The ΔK computation of Section VI passed
+three internal cross-checks: relative-entropy positivity, modal-vs-original-basis agreement to six decimals,
+and constant-offset consistency. An initial implementation produced relative-entropy violations of order
+10⁴, an unphysical result that immediately flagged the implementation error. Correction yielded orderunity values with positivity verified throughout. Relative-entropy positivity is the right sanity check for
+any modular-content code regardless of whether the underlying conjecture is true.
+
+In addition, the 3+1D continuum-limit study was performed in two independent autonomous runs that
+took different optimization paths: one used CPU NumPy with OpenBLAS multi-threading across 24 cores
+and finished in approximately 48 minutes, while the other ported the eigendecomposition to GPU using
+torch.linalg.eigh on the RTX 5090 and finished in under 3 minutes. The two runs agreed on ΔS to better
+than 2×10⁻⁵ and on the area-law sequence S_vac/N² to four decimals. Independent code paths on
+different hardware reaching the same numerical answer rules out implementation artifacts and round-offpattern artifacts simultaneously.
+
+X. CONCLUSION
+The literal static escrow postulate of [1], interpreted as a quantitative identification of S_esc = |
+U_grav|/T_Unruh with QFT bipartition entanglement entropy, fails in both 1+1D and 3+1D. In 1+1D the
+failure is qualitative (wrong sign, Dirichlet-wall behavior), quantitative (10.56 orders of magnitude in R
+across the scan), and robust (lattice-size converged, invariant under localization-scheme choice, not a
+dimensional artifact). In 3+1D the failure is structurally sharper: R_total has no finite continuum limit
+because the bipartition entropy is dominated by the Bombelli–Srednicki area law, while S_esc remains Nindependent; the dimensionless mass-induced ratio R_Δ is bounded by 10⁻³ across the (L, m) grid. Two
+independent code paths agree to five decimals on the 3+1D calculation. Mutual information confirms the
+failure from a third independent direction (R_MI spans 12+ orders of magnitude).
+One result is now positive within a finite regime: the modular Hamiltonian content ΔK, evaluated
+under the Bisognano–Wichmann conjecture, approximately recovers the BW linear asymptote ΔK ∝ d1 in
+1+1D within a small-d1 window (d1 ∈ [2, 6] at m=1), with a suppressed prefactor of approximately 1/30
+of the literal BW value. The published v0.4/v0.5 framing of "sublinear scaling at exponent 0.7" is here
+corrected to a regime-dependent characterization: the BW asymptote is recovered at small d1 with α ≈
+1.0, the local exponent decreases smoothly through intermediate values, and a single power-law fit
+averages across this crossover into the apparent 0.65–0.7 effective exponent. The 1+1D BW recovery is
+the closest-to-positive empirical evidence in the lattice tests, with the prefactor calculation as the sharpest
+open question (a candidate explanation in terms of UV/IR mismatch is discussed in Section VI.D). The
+companion paper [11] reports that the analogous 3+1D test does not recover the BW asymptote within the
+d1 range the lattice can resolve, with a peak ratio at matched mass approximately 14× smaller than the
+1+1D peak ratio; whether 3+1D BW recovery can be achieved at much larger d1 inaccessible to the
+present lattice remains an open question.
+The published framework's interpretive content and empirical results are not refuted; what is ruled out
+is the literal bipartition-entanglement reading of its central postulate. The framework's recovery of
+Bekenstein–Hawking entropy at horizons, its deep-MOND asymptote, and its constant-a₀ empirical
+content remain unaffected. Future tests should be directed at the modular-content reinterpretation, the
+horizon limit directly, or curved-spacetime regimes that go beyond the flat-space lattice approach used
+here.
+The framework now lives as a sharper, narrower, and dimension-aware set of claims: horizon
+thermodynamics is its strongest empirical anchor; flat-space bipartition entanglement is ruled out as a
+literal identification in both 1+1D and 3+1D; modular Hamiltonian content approximately recovers the
+BW linear asymptote in 1+1D within a small-d1 window (with a 1/30 prefactor whose origin is an open
+theoretical question, plausibly attributable to UV/IR mismatch between the lattice-localized mass and the
+continuum BW formula); modular-content recovery is dimension-dependent within the lattice sizes
+presently accessible, with 3+1D failing to recover BW at the d1 range probed in the companion paper
+[11]. Each of these is a bounded research direction with sharp positive-or-negative outcomes available
+from future tests, including 2+1D as a natural intermediate dimensional case and N ≳ 20 GPU runs in
+3+1D as a way to test whether BW recovery is reached at larger d1.
+
+VERSION NOTES
+v0.7 (May 2026) updates v0.6 with three small additions following pre-deposit review by Perplexity
+Deep Research. (i) Section VI.D adds a paragraph speculating on the calculable origin of the 1/30
+prefactor in 1+1D as a UV/IR mismatch between the lattice-localized mass perturbation (correlation
+length ξ ∼ 1/m ∼ 1 lattice spacing at m = 1) and the continuum BW formula (an infrared / longwavelength prediction). The Dirichlet boundary conditions are also flagged as a candidate contributor.
+This paragraph identifies a sharp theoretical question (a first-principles calculation of the latticeregularized modular Hamiltonian) that would resolve the prefactor's origin. (ii) References to the
+companion paper [11] in the abstract, Section VI.D, Section VIII.B, and Section X have been updated for
+consistency with the companion paper's v0.2 framing, which compares 1+1D and 3+1D at matched mass
+m = 1 (within the linear-response regime where the BW comparison is strictly meaningful) rather than at
+mismatched masses. The corrected matched-mass comparison shows the 1+1D peak ratio is
+approximately 14× larger than the 3+1D peak ratio in absolute prefactor, in addition to showing different
+qualitative scaling. (iii) The description of the 3+1D companion paper's result has been nuanced from
+"BW asymptote not recovered at any d1 the lattice can resolve" to "BW asymptote not recovered within
+the d1 range the lattice can resolve," acknowledging that the rate of approach to the continuum BW
+asymptote may genuinely be slower in 3+1D (where the conformal-symmetry group is finitedimensional) and that BW recovery at much larger d1 inaccessible to the present lattice cannot be strictly
+ruled out. No numerical results are altered between v0.6 and v0.7; only the discussion sections.
+v0.6 (May 2026) updated v0.5 with one substantive correction. (i) The Section VI.C reporting of the
+ΔK L-scaling was rewritten. The previous v0.4/v0.5 statement that ΔK shows "sublinear scaling at
+exponent 0.7±0.05" was the result of fitting a single power law across the seven-point L scan in the twomass protocol. Sliding-window analysis of the same data, supplemented by a single-mass-in-A protocol
+that cleanly disentangles d1 (perpendicular distance of the mass in subsystem A to the cut) from L (mass
+separation), shows that the function ΔK(d1) is not a single power law: the local exponent evolves
+smoothly from α ≈ +1.0 in a small-d1 window (d1 ∈ [2, 6] at m=1) down through intermediate values to
+α ≈ +0.5 in a decay tail at d1 ≳ 16. The published "0.7" was an effective exponent obtained by averaging
+across this smooth crossover, not a universal scaling. The corrected interpretation is that the BW linear
+asymptote ΔK ∝ d1 is approximately recovered in 1+1D at small d1, with a suppressed prefactor of
+approximately 1/30 of the literal BW value. The crossover into a sublinear decay tail at larger d1 reflects
+geometric corrections to the BW half-space assumption (Dirichlet boundary conditions, finite subsystemA depth) rather than a fundamental failure of the modular-content interpretation. (ii) The abstract, Section
+VI.D interpretation paragraph, and the conclusion in Section X were rewritten for internal consistency
+with the corrected Section VI.C, including a cross-reference to the companion paper [11] which extends
+the same methodology to 3+1D. (iii) The v0.5-promised 3+1D ΔK follow-up was completed and is
+reported as the companion paper [11]. No numerical results are altered between v0.5 and v0.6; only the
+framing and analysis of the existing data.
+v0.5 (May 2026) updated v0.4 with two changes addressing pre-deposit referee feedback. (i) The
+acknowledgment language describing LLM use was tightened: the previous wording — "Three
+independent reviewers (Anthropic Claude Opus 4.7, xAI Grok, Perplexity Deep Research) reviewed the
+lattice run output and converged on the same headline assessment" — risked being read as a claim that
+LLM critique substituted for human peer review. The corrected wording in the Acknowledgments
+characterized these uses as LLM-assisted code review and cross-comparison, with the substantive crossvalidation being the agreement to better than five decimal places between two independent code paths
+(CPU NumPy and GPU PyTorch) on different hardware, as reported in Section IX. (ii) The L-scaling
+exponent for ΔK reported in Section VI.C was qualified: the v0.4 statement "ΔK ∝ L^{0.7}" had been
+reported without uncertainty or universality caveats. v0.5 reported the exponent as 0.7±0.05 from the
+seven-point fit. v0.6 (above) supersedes this characterization with the regime-dependent analysis.
+
+ACKNOWLEDGMENTS
+LLM-assisted code review and cross-comparison of the lattice run output were performed by
+Anthropic Claude Opus 4.7, xAI Grok, and Perplexity Deep Research; small numerical details were
+corrected through this cross-comparison process. These tools were used for code review and consistency
+checks, not as substitutes for peer review. The substantive cross-validation reported in this paper is the
+agreement to better than five decimal places between two independent code paths (CPU NumPy with
+OpenBLAS and GPU PyTorch with CUDA) implementing the 3+1D continuum-limit study on different
+hardware, as described in Section IX. The author is solely responsible for the conclusions and any
+remaining errors. This work is the third in a series following [1] and [3].
+
+DATA AND CODE AVAILABILITY
+Lattice scripts, validation code, parameter-scan results (1+1D scan: 295 points at N up to 3000; 3+1D
+scans: original 25-point preliminary scan and the GPU-accelerated continuum-limit extension with 45
+mass points + 4 vacuum entropies at N ∈ {14, 16, 18, 20}), modular Hamiltonian code with three internal
+cross-checks, mutual information code, 3+1D lattice code with both CPU and GPU paths, continuumlimit table generator, diagnostic plots, and run logs are deposited alongside this preprint. The scripts use
+NumPy, SciPy, and (for the GPU path) PyTorch with CUDA. A clean rerun of the full 1+1D pipeline
+takes approximately 7 minutes on the reference hardware; the GPU-accelerated 3+1D continuum-limit
+scan completes in approximately 3 minutes.
+
+REFERENCES
+[1] G. L. Whitmer III, Gravitational Entropy Escrow: An Interpretive Synthesis of Thermodynamic
+Approaches to Gravity, Zenodo (2026), doi:10.5281/zenodo.20032023.
+[2] E. P. Verlinde, On the Origin of Gravity and the Laws of Newton, J. High Energy Phys. 04, 029
+(2011), arXiv:1001.0785.
+[3] G. L. Whitmer III, On the Status of Local Entropy-Current Extensions of the Gravitational Entropy
+Escrow Framework: A Clarification Note, Zenodo (2026), doi:10.5281/zenodo.20041992.
+[4] J. D. Bekenstein, Universal upper bound on the entropy-to-energy ratio for bounded systems, Phys.
+Rev. D 23, 287 (1981).
+[5] I. Peschel, Calculation of reduced density matrices from correlation functions, J. Phys. A: Math. Gen.
+36, L205 (2003).
+[6] J. J. Bisognano and E. H. Wichmann, On the duality condition for quantum fields, J. Math. Phys. 17,
+303 (1976).
+[7] P. Calabrese and J. Cardy, Entanglement entropy and quantum field theory, J. Stat. Mech. P06002
+(2004), hep-th/0405152.
+[8] L. Bombelli, R. K. Koul, J. Lee, and R. D. Sorkin, Quantum source of entropy for black holes, Phys.
+Rev. D 34, 373 (1986).
+[9] M. Srednicki, Entropy and area, Phys. Rev. Lett. 71, 666 (1993).
+[10] P. Calabrese, J. Cardy, and E. Tonni, Entanglement entropy of two disjoint intervals in conformal
+field theory, J. Stat. Mech. P11001 (2009), arXiv:0905.2069.
+[11] G. L. Whitmer III, Dimensional Dependence of Modular Hamiltonian Content in the Gravitational
+Entropy Escrow Framework: 3+1D Cubic-Lattice Test (companion paper, v0.2), Zenodo (2026), doi:
+forthcoming.
+
+

@@ -1,0 +1,46 @@
+% Paper 13 of The Windstorm Institute (Track 2: Entropic Bounds)
+% Supplement to Paper 11 (Gravitational Entropy Escrow)
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{natbib}
+
+\title{A Lattice Quantum Field Theory Test of the Static Escrow Postulate:\\
+1+1D and 3+1D Falsification with Modular-Hamiltonian Partial Survival}
+
+\author{Grant Lavell Whitmer III\\
+The Windstorm Institute, Fort Ann, NY 12828, USA\\
+\texttt{grantwhitmer3@gmail.com}}
+
+\date{May 2026 (v0.7)}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We test the static gravitational entropy escrow postulate $S_\text{esc} = |U_\text{grav}| / T_\text{Unruh}$ of Whitmer~(2026) using lattice quantum field theory. In 1+1 dimensions, a 295-point parameter scan of a free massless scalar at lattice sizes up to $N = 3000$ finds that the dimensionless ratio $R = S_\text{ent}/S_\text{esc}$ spans 10.56 orders of magnitude across the $(L, m)$ grid; the mass-induced entanglement $\Delta S = S_\text{ent} - S_\text{vac}$ is uniformly negative; and the result is $N$-converged to four decimal places. In 3+1 dimensions, an $N^3$-site scan over $N \in \{10, 12, 14, 16, 18, 20\}$ confirms the Bombelli--Srednicki area law ($S_\text{vac}/N^2 \to 0.0228$) and shows that $R$ has no finite continuum limit because the bipartition entropy is dominated by the area-law vacuum term, while the mass-induced ratio $R_\Delta = \Delta S / S_\text{esc}$ is bounded by $10^{-3}$ across the grid. Two independent code paths agree to five decimals, ruling out implementation artifacts. Mutual information $I(M_1{:}M_2)$ between regions surrounding the masses decays as $L^{-4}$, opposite to the linear growth required by the postulate. The modular Hamiltonian content $\Delta K$, evaluated under the Bisognano--Wichmann conjecture, exhibits the right sign and approximately recovers the BW linear asymptote $\Delta K \propto d_1$ in 1+1D within a small-$d_1$ window ($d_1 \in [2,6]$ at $m=1$), with prefactor approximately $1/30$ of the literal BW value. At larger $d_1$ the local exponent decreases smoothly into a sublinear decay tail; the previously-published v0.4/v0.5 figure of ``$\Delta K \propto L^{0.7}$'' is here corrected to a regime-dependent characterization, with the single-power-law exponent identified as a fitting artifact across a smooth crossover. The literal bipartition-entropy reading of the postulate is ruled out in both 1+1D and 3+1D; the modular-content interpretation is approximately correct in 1+1D within the small-$d_1$ BW regime, with a calculable suppression factor as the remaining open question. A companion paper reports that the 3+1D modular content does not recover the BW asymptote within the $d_1$ range the lattice can resolve, with $\Delta K$ peaked at $d_1 \approx 2$ and decaying as $d_1^{-2}$ to $d_1^{-3}$ for larger $d_1$, indicating that BW recovery is dimension-dependent or, equivalently, that the rate of approach to the continuum BW asymptote is substantially slower in 3+1D than in 1+1D. The framework's horizon-limit recoveries (Bekenstein--Hawking entropy via surface gravity) are independent of these flat-space tests.
+\end{abstract}
+
+\noindent\textbf{Keywords:} modified gravity; MOND; entropic gravity; horizon thermodynamics; lattice quantum field theory; modular Hamiltonian; Bisognano--Wichmann theorem; gravitational entropy; Williamson decomposition; falsification; static escrow postulate.
+
+\section{Introduction}
+
+The full text of this paper (current version v0.7) is provided as \texttt{paper.pdf} in this repository. An extracted-text mirror suitable for grep/search is in \texttt{paper/Paper13-v0.7-source.txt}.
+
+\section*{Companion paper}
+
+This is a supplement to the Gravitational Entropy Escrow framework presented in Whitmer (2026), \url{https://github.com/Windstorm-Institute/gravitational-entropy-escrow}, DOI \texttt{10.5281/zenodo.20032023}.
+
+The 3+1D follow-up referenced in v0.7 is a separate Zenodo deposit (citation TBD) and ships its own deposit package with the 3+1D production code (\texttt{lattice\_3d\_modular\_external.py}), the 1+1D control code (\texttt{lattice\_1d\_modular.py}, mirrored in this repo's Labs counterpart), and raw production-run JSON outputs.
+
+\section*{Code and Data Availability}
+
+The Python script \texttt{lattice\_1d\_modular.py} reproducing every numerical claim in v0.7 \S VI.C is mirrored at \url{https://github.com/Windstorm-Labs/lattice-qft-test} in \texttt{experiments/lattice\_1d/}. The script is self-contained (numpy + scipy.linalg.eigh, no GPU required) and runs the full 1+1D scan in approximately 10 minutes on a single CPU core. Two independent computational paths were used for the 3+1D companion (CPU NumPy with OpenBLAS multi-threading and a GPU implementation using torch.linalg.eigh on an NVIDIA RTX 5090); the two paths agree on $\Delta S$ at the $N=14$ anchor to better than $2 \times 10^{-5}$.
+
+External-provider verification audit: the 3+1D dispatch script was sent to three external LLM sandboxes for independent execution. Two Perplexity runs reproduced local ground-truth at $\leq 0.05\%$ across all shared points; Gemini's reported numbers were determined to be fabricated (no consistent error pattern; signature of code non-execution) and have been discarded. See appendix A of \texttt{CONSOLIDATED\_FINDINGS.md} (Labs mirror) for the full audit.
+
+\end{document}
