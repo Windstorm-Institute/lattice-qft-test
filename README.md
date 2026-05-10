@@ -4,11 +4,11 @@
 
 Grant Lavell Whitmer III · Windstorm Labs, The Windstorm Institute · Fort Ann, NY, USA
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20043421-blue)](https://doi.org/10.5281/zenodo.20043421)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20057538-blue)](https://doi.org/10.5281/zenodo.20057538)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
 [![Track: Entropic Bounds](https://img.shields.io/badge/Track-2_·_Entropic_Bounds-8b5cf6)](https://windstorminstitute.org/#track2)
 
-**Zenodo (concept, always latest):** [10.5281/zenodo.20043421](https://doi.org/10.5281/zenodo.20043421) · **Current version: v0.7** ([10.5281/zenodo.20057538](https://doi.org/10.5281/zenodo.20057538), May 2026)
+**Zenodo:** [10.5281/zenodo.20057538](https://doi.org/10.5281/zenodo.20057538) · **Current version: v0.7** ([10.5281/zenodo.20057538](https://doi.org/10.5281/zenodo.20057538), May 2026)
 
 **Supplement to:** [Paper 11 — Gravitational Entropy Escrow](https://github.com/Windstorm-Institute/gravitational-entropy-escrow) ([10.5281/zenodo.20032023](https://doi.org/10.5281/zenodo.20032023))
 
@@ -74,11 +74,11 @@ The 1+1D production code is mirrored at:
 
 It uses numpy + scipy.linalg.eigh (CPU-only), reproduces all 1+1D numerical claims in §VI.C, and runs the full scan in approximately 10 minutes on a single CPU core.
 
-Current authoritative archive: **[Zenodo (10.5281/zenodo.20043421)](https://doi.org/10.5281/zenodo.20043421)**.
+Current authoritative archive: **[Zenodo (10.5281/zenodo.20057538)](https://doi.org/10.5281/zenodo.20057538)**.
 
 ## Citation
 
-> Whitmer, G. L. III (2026). *A Lattice Quantum Field Theory Test of the Static Escrow Postulate: 1+1D and 3+1D Falsification with Modular-Hamiltonian Partial Survival.* Zenodo. [10.5281/zenodo.20043421](https://doi.org/10.5281/zenodo.20043421) (v0.7).
+> Whitmer, G. L. III (2026). *A Lattice Quantum Field Theory Test of the Static Escrow Postulate: 1+1D and 3+1D Falsification with Modular-Hamiltonian Partial Survival.* Zenodo. [10.5281/zenodo.20057538](https://doi.org/10.5281/zenodo.20057538) (v0.7).
 
 ---
 
@@ -113,7 +113,7 @@ Current authoritative archive: **[Zenodo (10.5281/zenodo.20043421)](https://doi.
 | 10 | [Phonon Extraction Bound (BEC Analog Gravity)](https://github.com/Windstorm-Institute/phonon-extraction-bound) *(1st in track)* | [10.5281/zenodo.20014391](https://doi.org/10.5281/zenodo.20014391) |
 | 11 | [Gravitational Entropy Escrow](https://github.com/Windstorm-Institute/gravitational-entropy-escrow) *(2nd in track; framework paper)* | [10.5281/zenodo.20032023](https://doi.org/10.5281/zenodo.20032023) |
 | 12 | [C8 Clarification Note](https://github.com/Windstorm-Institute/c8-clarification-note) *(3rd in track; companion to Paper 11)* | [10.5281/zenodo.20041992](https://doi.org/10.5281/zenodo.20041992) |
-| 13 | [Lattice QFT Test of the Static Escrow Postulate](https://github.com/Windstorm-Institute/lattice-qft-test) *(this paper — 4th in track; supplement to Paper 11)* | [10.5281/zenodo.20043421](https://doi.org/10.5281/zenodo.20043421) |
+| 13 | [Lattice QFT Test of the Static Escrow Postulate](https://github.com/Windstorm-Institute/lattice-qft-test) *(this paper — 4th in track; supplement to Paper 11)* | [10.5281/zenodo.20057538](https://doi.org/10.5281/zenodo.20057538) |
 
 **Website:** [windstorminstitute.org](https://windstorminstitute.org)
 
