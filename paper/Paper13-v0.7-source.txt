@@ -552,7 +552,7 @@ Table V shows R_total at three representative (L, m) pairs across N. The diagnos
 no finite continuum limit: it grows as N² across the entire (L, m) grid, with
 R_total · S_esc = S_vac
 
-[exact, ratio 1.0000 at every measured N] .
+[to better than 1% at every measured point; the residual deviation is the R_Δ ≲ 10⁻³ mass effect] .
 
 (15)
 
