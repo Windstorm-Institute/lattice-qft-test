@@ -1,6 +1,6 @@
 # Submission scaffold — Entropy (MDPI)
 
-**Title:** A Lattice Quantum Field Theory Test of the Static Escrow Postulate: 1+1D and 3+1D Falsification with Modular-Hamiltonian Partial Survival
+**Title:** A Lattice Quantum Field Theory Test of the Static Escrow Postulate: 1+1D and 3+1D Falsification with a Suggestive Modular-Hamiltonian Window in 1+1D
 
 **Author:** Grant Lavell Whitmer III, The Windstorm Institute, Fort Ann, NY 12828, USA · grantwhitmer3@gmail.com
 
@@ -14,9 +14,9 @@
 
 We test the static gravitational entropy escrow postulate *S*<sub>esc</sub> = |*U*<sub>grav</sub>| / *T*<sub>Unruh</sub> of the Gravitational Entropy Escrow framework (companion paper, [10.5281/zenodo.20032023](https://doi.org/10.5281/zenodo.20032023)) using lattice quantum field theory across three independent entropy measures: bipartition entanglement entropy, mutual information between regions surrounding the masses, and modular Hamiltonian content evaluated under the Bisognano–Wichmann conjecture.
 
-In 1+1D (295-point parameter scan, lattice sizes up to N = 3000), the literal bipartition-entropy reading is falsified by **56 orders of magnitude** in the dimensionless ratio across the grid; mutual information falsifies it independently by decaying as L⁻⁴ where the postulate predicts linear growth. In 3+1D (cubic lattice up to N = 20, two independent code paths agreeing at N = 14 to better than 2×10⁻⁵), the mass-induced ratio R<sub>Δ</sub> is bounded below 10⁻³.
+In 1+1D (295-point parameter scan, lattice sizes up to N = 3000), the literal bipartition-entropy reading is falsified by **10.56 orders of magnitude** (a factor of ~4×10¹⁰) in the dimensionless ratio across the grid; mutual information falsifies it independently by decaying as L⁻⁴ where the postulate predicts linear growth. In 3+1D (cubic lattice up to N = 20, two independent code paths agreeing at N = 14 to better than 2×10⁻⁵), the mass-induced ratio R<sub>Δ</sub> is bounded below 10⁻³.
 
-The modular Hamiltonian content partially survives in 1+1D: ΔK approximately recovers the BW linear asymptote ΔK ∝ d<sub>1</sub> in a small-d<sub>1</sub> window (d<sub>1</sub> ∈ [2, 6] at m = 1) with prefactor approximately 1/30 of the literal BW value. The previously-published "ΔK ∝ L^{0.7} sublinear scaling" is here corrected to a regime-dependent characterization (sliding-window local exponent: α ≈ +1.0 in the BW window, smoothly transitioning through +0.5 in the decay tail). A companion paper reports 3+1D ΔK does not recover the BW asymptote within the resolvable d<sub>1</sub> range, indicating dimension-dependent recovery. The framework's horizon-limit recoveries (Bekenstein–Hawking via surface gravity) are independent of these flat-space tests.
+The modular Hamiltonian content leaves a suggestive fragment in 1+1D: at m = 1, ΔK shows a positive, approximately linear window (ΔK ∝ d<sub>1</sub>, d<sub>1</sub> ∈ [2, 6]) resembling the BW shape with prefactor approximately 1/30 — but m = 1 is outside the linear-response regime where the BW asymptote is derivable, and in that regime ΔK is negative and d<sub>1</sub>-independent, so the asymptote is not recovered. The previously-published "ΔK ∝ L^{0.7} sublinear scaling" is here corrected to a regime-dependent characterization (sliding-window local exponent: α ≈ +1.0 in the BW window, smoothly transitioning through +0.5 in the decay tail). A companion paper reports 3+1D ΔK does not recover the BW asymptote within the resolvable d<sub>1</sub> range, indicating dimension-dependent recovery. The framework's horizon-limit recoveries (Bekenstein–Hawking via surface gravity) are independent of these flat-space tests.
 
 ---
 

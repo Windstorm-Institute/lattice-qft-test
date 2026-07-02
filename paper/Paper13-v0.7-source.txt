@@ -1,5 +1,5 @@
 A Lattice Quantum Field Theory Test of the Static Escrow Postulate:
-1+1D and 3+1D Falsification with Modular-Hamiltonian Partial Survival
+1+1D and 3+1D Falsification, with a Suggestive Modular-Hamiltonian Window in 1+1D
 Grant L. Whitmer III
 Windstorm Institute, Fort Ann, New York 12828, USA
 (Dated: May 2026; Draft v0.7)
@@ -16,7 +16,7 @@ by the area-law vacuum term, while the mass-induced ratio R_Δ = ΔS/Sₙₘ is 
 implementation artifacts. Mutual information I(M₁:M₂) between regions surrounding the
 masses decays as L⁻⁴, opposite to the linear growth required by the postulate. The
 modular Hamiltonian content ΔK, evaluated under the Bisognano–Wichmann conjecture,
-exhibits the right sign and approximately recovers the BW linear asymptote ΔK ∝ d1 in
+shows a positive, approximately linear-in-d1 window (an empirical non-perturbative feature at m=1, not a linear-response recovery of the BW asymptote; in the linear-response regime ΔK is negative and d1-flat) resembling ΔK ∝ d1 in
 1+1D within a small-d1 window (d1 ∈ [2, 6] at m=1), with prefactor approximately 1/30
 of the literal BW value. At larger d1 the local exponent decreases smoothly into a
 sublinear decay tail; the previously-published v0.4/v0.5 figure of "ΔK ∝ L^{0.7}" is here
@@ -64,10 +64,10 @@ entanglement entropy, mutual information between regions, and modular Hamiltonia
 under the Bisognano–Wichmann conjecture [6].
 The headline result is that the literal identification of S_esc with bipartition entanglement entropy
 fails in both 1+1D and 3+1D. The mutual information measure confirms this independently. The modular
-Hamiltonian content gives a partial-survival result: right structural form, wrong magnitude. Section II
+Hamiltonian content gives a partial result: a positive, approximately linear ΔK window at m=1 with the right shape but suppressed magnitude, and the opposite sign in the linear-response regime. Section II
 describes the methodology. Section III describes the validations. Section IV reports the 1+1D result,
 Section V the independent confirmations from mutual information and the 3+1D continuum-limit study,
-Section VI the modular Hamiltonian partial-survival result. Section VII discusses the falsifiability check.
+Section VI the modular Hamiltonian window result (Section VI). Section VII discusses the falsifiability check.
 Sections VIII–X interpret what the test settles, methodological notes, and conclusion.
 
 II. METHODOLOGY
@@ -552,7 +552,7 @@ Table V shows R_total at three representative (L, m) pairs across N. The diagnos
 no finite continuum limit: it grows as N² across the entire (L, m) grid, with
 R_total · S_esc = S_vac
 
-[exact, ratio 1.0000 at every measured N] .
+[to better than 1% at every measured point; the residual deviation is the R_Δ ≲ 10⁻³ mass effect] .
 
 (15)
 
@@ -734,7 +734,7 @@ prefactor; (ii) the crossover into a sublinear decay tail is smooth, not abrupt;
 given window depends on which window is fit. We retract the v0.4 framing of "sublinear scaling" as a
 universal description and replace it with the regime-dependent characterization above.
 
-Second, the magnitude is too small. In the small-d1 BW regime [d1 ∈ [2, 6], m=1, N=1000], the
+Second, the magnitude is smaller than the literal BW prediction — though part of the gap is a normalization convention: the ½m²φᵢ² site perturbation inserts ground-state energy ΔE ≈ 0.256 at m=1 (not m=1), and normalizing ΔK to ΔE rather than to m raises the prefactor from ≈1/30 to ≈1/7. In the small-d1 BW regime [d1 ∈ [2, 6], m=1, N=1000], the
 prefactor ΔK / (2π·m·d1) is approximately 0.030–0.037, corresponding to a suppression factor of roughly
 1/30 relative to the literal BW prediction. The closely-related v0.4 figure of "approximately 55× smaller
 at L=4, m=1" came from the two-mass protocol where the relevant variable is d1 = L/2 = 2; under either
@@ -752,11 +752,11 @@ literal BW value 2π·m·d1. The smooth crossover into a sublinear decay tail at
 corrections to the BW half-space assumption: the lattice is not a true Rindler wedge, the boundary
 conditions are Dirichlet rather than free, and at d1 comparable to subsystem-A depth the half-space
 approximation breaks down. The decay tail is therefore consistent with a finite-size deformation of BW
-rather than a fundamental failure. Determining whether the prefactor 1/30 has a calculable origin (e.g.,
+rather than a fundamental failure. A substantial part of the prefactor is thus a normalization convention (energy-normalizing gives ≈1/7, above); determining whether the residual suppression has a calculable origin (e.g.,
 from boundary-condition corrections, from the lattice regularization, or from a missing dimensiondependent geometric factor) and whether the BW asymptote can be cleanly extracted in the limit of a true
 half-chain bipartition is left for future work. The result we report here is that the BW modular
 Hamiltonian asymptote is qualitatively correct in 1+1D within a finite small-d1 window; this is closer to a
-partial confirmation than v0.4 / v0.5 framings of the same data suggested.
+suggestive-but-inconclusive result than v0.4 / v0.5 framings of the same data suggested.
 The dimensional dependence of this result is investigated in a companion paper [11], which extends
 the same Williamson-decomposition methodology to a 3+1D cubic lattice. The 3+1D result is
 qualitatively different from the 1+1D result reported here: the BW linear asymptote is not recovered
@@ -830,7 +830,7 @@ SPARC reanalysis, the deep-MOND asymptote a₀ = c²√(Λ/3)/(2π), and the bar
 the deep-MOND asymptote and the framework's interpretive identification at horizons, neither of which
 is refuted by the present result.
 Modular-content variants remain partially open. The modular Hamiltonian result of Section VI shows
-the BW linear asymptote approximately recovered at small d1 in 1+1D, with prefactor approximately
+a positive, approximately linear ΔK window at small d1 in 1+1D at m=1 (not a linear-response recovery; ΔK is negative and flat in linear response), with prefactor approximately
 1/30. The companion paper [11] extends the same methodology to 3+1D and finds that the BW asymptote
 is not recovered within the d1 range the lattice can resolve, with ΔK peaked at d1 ≈ 2 and decaying as
 d1^{−2 to −3} for d1 ≥ 3. At matched mass (m = 1) the 1+1D peak ratio is also approximately 14× larger
@@ -847,7 +847,7 @@ C. Implication for the framework
 The framework's interpretive content survives the test. Its quantitative literal interpretation —
 specifically, the reading in which |U_grav|/T_Unruh equals the bipartition entanglement entropy of a
 quantum field across a surface separating two masses — does not. What survives is dimension-dependent:
-in 1+1D the BW modular Hamiltonian asymptote is approximately recovered within a small-d1 window,
+in 1+1D the modular Hamiltonian shows a positive, approximately linear window at m=1 (not a linear-response recovery; ΔK is negative and flat in linear response),
 with a calculable suppression factor of approximately 1/30 as the remaining open question; in 3+1D the
 BW asymptote is not recovered. The framework now lives as a horizon-thermodynamic interpretation
 supplemented by a 1+1D modular-content match, with the dimensional dependence of the modularcontent match being the principal open problem. Section VI's small-d1 BW recovery in 1+1D, together
@@ -889,7 +889,7 @@ because the bipartition entropy is dominated by the Bombelli–Srednicki area la
 independent code paths agree to five decimals on the 3+1D calculation. Mutual information confirms the
 failure from a third independent direction (R_MI spans 12+ orders of magnitude).
 One result is now positive within a finite regime: the modular Hamiltonian content ΔK, evaluated
-under the Bisognano–Wichmann conjecture, approximately recovers the BW linear asymptote ΔK ∝ d1 in
+under the Bisognano–Wichmann conjecture, shows a positive, approximately linear window (ΔK ∝ d1) at m=1 — resembling but not controllably recovering the BW asymptote (in linear response ΔK is negative and d1-flat) — in
 1+1D within a small-d1 window (d1 ∈ [2, 6] at m=1), with a suppressed prefactor of approximately 1/30
 of the literal BW value. The published v0.4/v0.5 framing of "sublinear scaling at exponent 0.7" is here
 corrected to a regime-dependent characterization: the BW asymptote is recovered at small d1 with α ≈
@@ -975,7 +975,7 @@ DATA AND CODE AVAILABILITY
 Lattice scripts, validation code, parameter-scan results (1+1D scan: 295 points at N up to 3000; 3+1D
 scans: original 25-point preliminary scan and the GPU-accelerated continuum-limit extension with 45
 mass points + 4 vacuum entropies at N ∈ {14, 16, 18, 20}), modular Hamiltonian code with three internal
-cross-checks, mutual information code, 3+1D lattice code with both CPU and GPU paths, continuumlimit table generator, diagnostic plots, and run logs are deposited alongside this preprint. The scripts use
+cross-checks, mutual information code, 3+1D lattice code with both CPU and GPU paths, continuumlimit table generator, diagnostic plots, and run logs were produced for this study; however, the Zenodo deposit (record 20057538) currently contains only the manuscript (PDF/DOCX), a deposit README, a consolidated-findings document, and the self-contained 1+1D script lattice_1d_modular.py, which reproduces the §VI.C modular-Hamiltonian claims — the 3+1D code, mutual-information code, parameter-scan results, and diagnostic plots are not yet deposited and will be added in a follow-up archive. The scripts use
 NumPy, SciPy, and (for the GPU path) PyTorch with CUDA. A clean rerun of the full 1+1D pipeline
 takes approximately 7 minutes on the reference hardware; the GPU-accelerated 3+1D continuum-limit
 scan completes in approximately 3 minutes.

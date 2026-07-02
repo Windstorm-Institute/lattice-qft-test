@@ -1,6 +1,6 @@
 # Submission scaffold — Classical and Quantum Gravity
 
-**Title:** A Lattice Quantum Field Theory Test of the Static Escrow Postulate: 1+1D and 3+1D Falsification with Modular-Hamiltonian Partial Survival
+**Title:** A Lattice Quantum Field Theory Test of the Static Escrow Postulate: 1+1D and 3+1D Falsification with a Suggestive Modular-Hamiltonian Window in 1+1D
 
 **Author:** Grant Lavell Whitmer III, The Windstorm Institute, Fort Ann, NY 12828, USA · grantwhitmer3@gmail.com
 
@@ -14,7 +14,7 @@ This paper supplements a companion paper, *Gravitational Entropy Escrow* (Whitme
 
 The framework paper introduces the static identification *S*<sub>esc</sub> = |*U*<sub>grav</sub>| / *T*<sub>Unruh</sub> as load-bearing for the entire interpretive picture: Newton's law follows from it, Bekenstein–Hawking entropy follows from it, the deep-MOND acceleration scale falls out of it. Section 7.6 of that paper notes explicitly that derivation of this identity from quantum field theory first principles is the natural next test. This paper performs that test, on a lattice, directly.
 
-The headline result is dimensional. In 1+1D the literal bipartition-entropy reading is falsified by 10⁵⁶ on the dimensionless ratio across the parameter grid; mutual information falsifies it independently by decaying as L⁻⁴ where the postulate predicts linear growth. In 3+1D the mass-induced ratio is bounded below 10⁻³. The modular Hamiltonian reading partially survives in 1+1D in a small-*d*<sub>1</sub> window with prefactor approximately 1/30; a companion paper extends the modular test to 3+1D and finds the BW asymptote is not recovered within the resolvable distance range.
+The headline result is dimensional. In 1+1D the literal bipartition-entropy reading is falsified by 10.56 orders of magnitude (a factor of ~4×10¹⁰) on the dimensionless ratio across the parameter grid; mutual information falsifies it independently by decaying as L⁻⁴ where the postulate predicts linear growth. In 3+1D the mass-induced ratio is bounded below 10⁻³. The modular Hamiltonian reading leaves a suggestive fragment in 1+1D: at m=1 a positive, approximately linear small-*d*<sub>1</sub> window with prefactor approximately 1/30 — but m=1 is outside the linear-response regime where the BW comparison is derivable, and in that regime ΔK is negative and *d*<sub>1</sub>-flat, so the BW asymptote is not recovered. A companion paper extends the modular test to 3+1D and finds no such window within the resolvable distance range.
 
 We submit this paper to CQG because it is the kind of result a healthy literature on emergent / entropic gravity ought to make space for: a direct falsification of a load-bearing postulate, with explicit identification of which structural features of the prediction survive (BW linear scaling shape) and which do not (literal bipartition entropy; 3+1D BW recovery). The companion framework paper's empirical content (constant *a*<sub>0</sub>, deep-MOND, SPARC + Genzel reanalyses) and horizon-limit recoveries (Bekenstein–Hawking via surface gravity, Gibbons–Hawking via the de Sitter horizon) are independent of these flat-space tests; what fails is specifically the static identification in its literal QFT form.
 

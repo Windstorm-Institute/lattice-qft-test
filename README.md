@@ -1,6 +1,6 @@
 # Paper 13: Lattice QFT Test of the Static Escrow Postulate
 
-**A Lattice Quantum Field Theory Test of the Static Escrow Postulate: 1+1D and 3+1D Falsification with Modular-Hamiltonian Partial Survival**
+**A Lattice Quantum Field Theory Test of the Static Escrow Postulate: 1+1D and 3+1D Falsification with a Suggestive Modular-Hamiltonian Window in 1+1D**
 
 Grant Lavell Whitmer III · Windstorm Labs, The Windstorm Institute · Fort Ann, NY, USA
 
@@ -40,9 +40,9 @@ The tests are run on 1+1D lattices up to N = 3000 (a 295-point parameter scan ov
 - In 3+1D the mass-induced ratio R_Δ = ΔS / S_esc is bounded by 10⁻³ across all grid points; mutual information decays as L⁻⁴, opposite to the linear growth required by the postulate.
 - Two independent code paths (CPU NumPy + GPU torch.linalg.eigh on a current-generation Nvidia GPU) agree on ΔS at the N = 14 anchor to better than 2×10⁻⁵, ruling out implementation artifacts.
 
-**The modular Hamiltonian gives a partial-survival result in 1+1D — right structural form, suppressed magnitude.**
+**The modular Hamiltonian gives a suggestive empirical result in 1+1D at m=1 — right structural shape, suppressed magnitude — but NOT a linear-response recovery of BW.**
 
-- ΔK approximately recovers the Bisognano–Wichmann linear asymptote ΔK ∝ d1 in a small-d1 window (d1 ∈ [2, 6] at m = 1).
+- At m = 1, ΔK shows a positive, approximately linear window (ΔK ∝ d1, α ≈ 1.0) over d1 ∈ [2, 6], matching the BW linear shape. This is a non-perturbative feature: m = 1 is outside the linear-response regime where Eq. (17) is derivable (S_rel ≳ ΔK). In the genuine linear-response regime (m ≲ 0.1) ΔK is uniformly negative and essentially d1-independent, so the literal BW asymptote is not recovered.
 - Prefactor: approximately 1/30 of the literal BW value.
 - At larger d1 the local exponent decreases smoothly into a sublinear decay tail.
 - The previously-published v0.4/v0.5 figure of "ΔK ∝ L^{0.7}" is here corrected to a regime-dependent characterization. The single-power-law exponent was a fitting artifact across a smooth crossover; sliding-window analysis shows the local exponent evolves from α ≈ +1.0 in the small-d1 BW window down through α ≈ +0.5 in the decay tail at d1 ≥ 16.
@@ -53,7 +53,7 @@ The tests are run on 1+1D lattices up to N = 3000 (a 295-point parameter scan ov
 
 **Ruled out:** a direct identification of S_esc with the bipartition entanglement entropy of two-mass configurations in free scalar QFT, in any spacetime dimension tested. The mutual information evidence rules this out independently of the bipartition test.
 
-**Partial survival:** a direct identification of S_esc with the modular Hamiltonian content, in 1+1D, within a small-d1 window, with a calculable suppression factor (~1/30) as the remaining open question. Whether this survival extends to 3+1D at d1 inaccessible to the present lattice is unsettled.
+**Suggestive window (not a survival):** in 1+1D at m = 1, ΔK shows a positive, approximately linear small-d1 window resembling the modular-content reading of S_esc, with a suppression factor (~1/30). This is not a linear-response recovery of BW — in the linear-response regime (m ≲ 0.1) ΔK is negative and d1-independent. Both the sign of ΔK in linear response and the origin of the ~1/30 prefactor are open; whether any controlled recovery extends to 3+1D is unsettled.
 
 **Unaffected:** the framework's horizon-limit recoveries — Bekenstein–Hawking entropy via surface gravity, Gibbons–Hawking entropy via the de Sitter horizon — are independent of these flat-space tests. Those go through the surface-gravity Unruh temperature and are not flat-space modular content. The framework's *empirical* content (constant a₀, deep-MOND, SPARC reanalysis, baryonic Tully–Fisher, Genzel five-case test) is also unaffected.
 
@@ -78,7 +78,7 @@ Current authoritative archive: **[Zenodo (10.5281/zenodo.20057538)](https://doi.
 
 ## Citation
 
-> Whitmer, G. L. III (2026). *A Lattice Quantum Field Theory Test of the Static Escrow Postulate: 1+1D and 3+1D Falsification with Modular-Hamiltonian Partial Survival.* Zenodo. [10.5281/zenodo.20057538](https://doi.org/10.5281/zenodo.20057538) (v0.7).
+> Whitmer, G. L. III (2026). *A Lattice Quantum Field Theory Test of the Static Escrow Postulate: 1+1D and 3+1D Falsification with a Suggestive Modular-Hamiltonian Window in 1+1D.* Zenodo. [10.5281/zenodo.20057538](https://doi.org/10.5281/zenodo.20057538) (v0.7).
 
 ---
 
