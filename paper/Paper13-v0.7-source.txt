@@ -646,7 +646,7 @@ saturates while S_esc grows linearly. In 3+1D, R_total has no continuum limit at
 bipartition entropy is dominated by the cut-area vacuum term, which has no relationship to the mass
 binding.
 
-VI. MODULAR HAMILTONIAN CONTENT: A PARTIAL-SURVIVAL RESULT
+VI. MODULAR HAMILTONIAN CONTENT: A SUGGESTIVE WINDOW IN 1+1D
 A. Bisognano–Wichmann motivation
 The Bisognano–Wichmann theorem [6] states that the modular Hamiltonian K_A of a Lorentzinvariant quantum field theory restricted to a half-space is, in vacuum,
 K_BW = 2π ∫ x_⊥ T₀₀(x) dᵈx ,
