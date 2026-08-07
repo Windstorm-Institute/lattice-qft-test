@@ -61,7 +61,6 @@ The tests are run on 1+1D lattices up to N = 3000 (a 295-point parameter scan ov
 
 - **[paper.pdf](paper.pdf)** — full v0.7 manuscript (14 pages)
 - **[paper/Paper13-v0.7-source.txt](paper/Paper13-v0.7-source.txt)** — extracted-text mirror (for grep / search)
-- **[article.html](article.html)** — long-form lay-friendly companion (mirror of the [website article](https://windstorminstitute.org/articles/lattice-qft-test.html))
 - **[paper-arxiv.tex](paper-arxiv.tex)** — arXiv submission scaffold (gr-qc, hep-lat, hep-th)
 - **[paper-prd-draft.md](paper-prd-draft.md)** · **[paper-cqg-draft.md](paper-cqg-draft.md)** · **[paper-entropy-draft.md](paper-entropy-draft.md)** — journal submission scaffolds (Physical Review D, Classical and Quantum Gravity, Entropy / MDPI)
 - **[CONSOLIDATED_FINDINGS.md (Labs mirror)](https://github.com/Windstorm-Labs/lattice-qft-test/blob/main/CONSOLIDATED_FINDINGS.md)** — pre-publication analysis document showing how the v0.6/v0.7 corrections were derived (sliding-window fits, single-mass-in-A protocol, 1+1D vs 3+1D dimensional difference, multi-LLM verification audit)
