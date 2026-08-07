@@ -12,7 +12,7 @@
 
 ## Cover-letter abstract
 
-The Gravitational Entropy Escrow framework (companion paper, Zenodo [10.5281/zenodo.20032023](https://doi.org/10.5281/zenodo.20032023)) makes a load-bearing static identification *S*<sub>esc</sub> = |*U*<sub>grav</sub>| / *T*<sub>Unruh</sub> between gravitational binding energy and quantum-field entropy held in escrow against the local Unruh temperature. We test this identification directly using lattice quantum field theory across three independent entropy measures: bipartition entanglement entropy, mutual information between regions surrounding the masses, and modular Hamiltonian content evaluated under the Bisognano–Wichmann conjecture.
+The Gravitational Entropy Escrow framework (companion paper, Zenodo [10.5281/zenodo.20031931](https://doi.org/10.5281/zenodo.20031931)) makes a load-bearing static identification *S*<sub>esc</sub> = |*U*<sub>grav</sub>| / *T*<sub>Unruh</sub> between gravitational binding energy and quantum-field entropy held in escrow against the local Unruh temperature. We test this identification directly using lattice quantum field theory across three independent entropy measures: bipartition entanglement entropy, mutual information between regions surrounding the masses, and modular Hamiltonian content evaluated under the Bisognano–Wichmann conjecture.
 
 In 1+1D (free massless scalar, lattice sizes up to N = 3000, 295-point (N, L, m) parameter scan) the dimensionless ratio R = S<sub>ent</sub>/S<sub>esc</sub> spans **10.56 orders of magnitude** across the grid; mass-induced entanglement is uniformly negative; the result is N-converged to four decimal places. In 3+1D (cubic lattice up to N = 20, two independent code paths agreeing on ΔS at N = 14 to better than 2×10⁻⁵), the mass-induced ratio R<sub>Δ</sub> is bounded by 10⁻³ across the grid; mutual information decays as L⁻⁴, opposite to the linear growth required by the postulate. The literal bipartition-entropy reading of the postulate is ruled out in both dimensions.
 
@@ -22,7 +22,7 @@ The modular Hamiltonian content gives a suggestive but limited result in 1+1D: a
 
 ## Companion paper
 
-This is a supplement to *Gravitational Entropy Escrow: An Interpretive Synthesis of Thermodynamic Approaches to Gravity* (Whitmer 2026), Zenodo [10.5281/zenodo.20032023](https://doi.org/10.5281/zenodo.20032023). The two papers are intended to be read together: the framework paper presents the static identification as load-bearing; this paper tests it directly.
+This is a supplement to *Gravitational Entropy Escrow: An Interpretive Synthesis of Thermodynamic Approaches to Gravity* (Whitmer 2026), Zenodo [10.5281/zenodo.20031931](https://doi.org/10.5281/zenodo.20031931). The two papers are intended to be read together: the framework paper presents the static identification as load-bearing; this paper tests it directly.
 
 ## What's in this repo
 

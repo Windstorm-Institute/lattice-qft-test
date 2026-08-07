@@ -10,7 +10,7 @@
 
 ## Cover note
 
-This paper supplements a companion paper, *Gravitational Entropy Escrow* (Whitmer 2026, [10.5281/zenodo.20032023](https://doi.org/10.5281/zenodo.20032023)), under separate submission.
+This paper supplements a companion paper, *Gravitational Entropy Escrow* (Whitmer 2026, [10.5281/zenodo.20031931](https://doi.org/10.5281/zenodo.20031931)), under separate submission.
 
 The framework paper introduces the static identification *S*<sub>esc</sub> = |*U*<sub>grav</sub>| / *T*<sub>Unruh</sub> as load-bearing for the entire interpretive picture: Newton's law follows from it, Bekenstein–Hawking entropy follows from it, the deep-MOND acceleration scale falls out of it. Section 7.6 of that paper notes explicitly that derivation of this identity from quantum field theory first principles is the natural next test. This paper performs that test, on a lattice, directly.
 
@@ -18,7 +18,7 @@ The headline result is dimensional. In 1+1D the literal bipartition-entropy read
 
 We submit this paper to CQG because it is the kind of result a healthy literature on emergent / entropic gravity ought to make space for: a direct falsification of a load-bearing postulate, with explicit identification of which structural features of the prediction survive (BW linear scaling shape) and which do not (literal bipartition entropy; 3+1D BW recovery). The companion framework paper's empirical content (constant *a*<sub>0</sub>, deep-MOND, SPARC + Genzel reanalyses) and horizon-limit recoveries (Bekenstein–Hawking via surface gravity, Gibbons–Hawking via the de Sitter horizon) are independent of these flat-space tests; what fails is specifically the static identification in its literal QFT form.
 
-The methodology section (§IX) documents an external-provider verification audit relevant to anyone running multi-LLM scientific workflows: two Perplexity sandbox runs reproduced local ground-truth at ≤0.05%; one Gemini run was determined to have fabricated numbers (no consistent error pattern; signature of code non-execution). The lesson — multi-LLM cross-validation requires external ground-truth anchoring — echoes the methodology weight of our prior C8 Clarification Note (Zenodo 10.5281/zenodo.20041992, in a different scientific direction).
+The methodology section (§IX) documents an external-provider verification audit relevant to anyone running multi-LLM scientific workflows: two Perplexity sandbox runs reproduced local ground-truth at ≤0.05%; one Gemini run was determined to have fabricated numbers (no consistent error pattern; signature of code non-execution). The lesson — multi-LLM cross-validation requires external ground-truth anchoring — echoes the methodology weight of our prior C8 Clarification Note (Zenodo 10.5281/zenodo.20041991, in a different scientific direction).
 
 ---
 

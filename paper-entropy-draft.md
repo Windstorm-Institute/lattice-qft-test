@@ -12,7 +12,7 @@
 
 ## Cover-letter abstract
 
-We test the static gravitational entropy escrow postulate *S*<sub>esc</sub> = |*U*<sub>grav</sub>| / *T*<sub>Unruh</sub> of the Gravitational Entropy Escrow framework (companion paper, [10.5281/zenodo.20032023](https://doi.org/10.5281/zenodo.20032023)) using lattice quantum field theory across three independent entropy measures: bipartition entanglement entropy, mutual information between regions surrounding the masses, and modular Hamiltonian content evaluated under the Bisognano–Wichmann conjecture.
+We test the static gravitational entropy escrow postulate *S*<sub>esc</sub> = |*U*<sub>grav</sub>| / *T*<sub>Unruh</sub> of the Gravitational Entropy Escrow framework (companion paper, [10.5281/zenodo.20031931](https://doi.org/10.5281/zenodo.20031931)) using lattice quantum field theory across three independent entropy measures: bipartition entanglement entropy, mutual information between regions surrounding the masses, and modular Hamiltonian content evaluated under the Bisognano–Wichmann conjecture.
 
 In 1+1D (295-point parameter scan, lattice sizes up to N = 3000), the literal bipartition-entropy reading is falsified by **10.56 orders of magnitude** (a factor of ~4×10¹⁰) in the dimensionless ratio across the grid; mutual information falsifies it independently by decaying as L⁻⁴ where the postulate predicts linear growth. In 3+1D (cubic lattice up to N = 20, two independent code paths agreeing at N = 14 to better than 2×10⁻⁵), the mass-induced ratio R<sub>Δ</sub> is bounded below 10⁻³.
 
